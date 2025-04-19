@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fc350b, #3b3e6f); /* Gradient Background */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #Fef1e1; /* Light Cream Background */
+    padding: 40px;
+    border-radius: 15px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #f83838;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+input[type="password"] {
+    padding: 15px;
+    width: 85%;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: white;
+    font-size: 1em;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    background-color: #1a62d6;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #fc350b;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #059669;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.result h2 {
+    font-size: 1.5em;
+    color: #38bdf8;
+}
+
+.result ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result li {
+    font-size: 1em;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+section {
+    margin-top: 30px;
+    text-align: left;
+    color: #333;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #fc350b;
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+section li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+section i {
+    margin-right: 10px;
+    color: #fc350b; /* Icon color */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    section h2 {
+        font-size: 1.2em;
+    }
+    section li {
+        font-size: 1em;
+    }
+}

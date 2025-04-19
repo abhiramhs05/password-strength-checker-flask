@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Footer Styles */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Checker 🔐</h1>
+        <form method="POST">
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Check</button>
+        </form>
+
+        {% if strength %}
+            <div class="result">
+                <h2>{{ strength }}</h2>
+                {% if remarks %}
+                    <ul>
+                        {% for remark in remarks %}
+                            <li>{{ remark }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer with GitHub & LinkedIn Logos -->
+    <footer>
+        <a href="https://github.com/abhiramhs05" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="footer-icon">
+        </a>
+        <a href="https://linkedin.com/in/abhiramhsop" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="footer-icon">
+        </a>
+    </footer>
+</body>
+</html>
